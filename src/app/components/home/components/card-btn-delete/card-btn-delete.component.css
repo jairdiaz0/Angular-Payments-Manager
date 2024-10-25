@@ -1,0 +1,56 @@
+/* From Uiverse.io by vinodjangid07 Modified by Jair Diaz*/
+.button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: .75rem;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 7rem;
+    border-radius: 5rem;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    width: 4.5rem;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.button::before {
+    position: absolute;
+    top: -1.5rem;
+    content: "Eliminar";
+    color: white;
+    transition-duration: .3s;
+    font-size: .5rem;
+}
+
+.button:hover::before {
+    font-size: .75rem;
+    opacity: 1;
+    transform: translateY(2rem);
+    transition-duration: .3s;
+}

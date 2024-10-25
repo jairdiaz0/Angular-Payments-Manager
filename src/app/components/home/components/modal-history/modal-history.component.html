@@ -1,0 +1,26 @@
+<div class="modal fade" id="modalHistory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalHistoryLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalHistoryLabel">Agregar Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card mb-3" *ngFor="let payment of getItemSelected()?.payments">
+                    <div class="card-header bg-dark text-white">
+                        {{payment.title?payment.title:"Información de pago"}}
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">
+                            Fecha: {{payment.date}}
+                        </li>
+                        <li class="list-group-item">
+                            Monto: {{getFormatNumber(payment.amount)}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

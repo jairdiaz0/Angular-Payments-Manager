@@ -1,0 +1,30 @@
+<div class="card" (click)="setItemSelected()">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-around">
+            <img class="img-fluid icon-1" src="assets/receive.svg" alt="Tipo" title="Tipo de registro"
+                data-bs-toggle="modal" data-bs-target="#modalHistory" />
+            <div class="align-items-center">
+                <p class="fw-bold">{{item?.name}}</p>
+                <span class="text-body-secondary fw-bold">${{getFormatNumber(item?.total)}}</span>
+            </div>
+            <img class="img-fluid icon-2" src="assets/pay.svg" alt="Agregar Pago" title="Agregar Pago"
+                data-bs-toggle="modal" data-bs-target="#modalPay"/>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row align-items-center my-2">
+            <div class="col-8 col-md-8 justify-content-center">
+                <div class="progress" role="progressbar" aria-label="Example with label"
+                    [attr.aria-valuenow]="getProgressPercentage()" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success fw-bold" [style.width.%]="getProgressPercentage()"></div>
+                </div>
+                <p class="text-white-50 fw-bold mb-0 text-center">$ {{ getFormatNumber(getSubTotal()) }}</p>
+            </div>
+            <div class="col-4 col-md-4">
+                <div class="d-flex justify-content-end">
+                    <app-card-btn-delete (click)="delete()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

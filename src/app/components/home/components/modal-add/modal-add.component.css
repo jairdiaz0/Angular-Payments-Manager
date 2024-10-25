@@ -1,0 +1,8 @@
+img.accept {
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+img.accept:hover {
+    opacity: .7;
+}

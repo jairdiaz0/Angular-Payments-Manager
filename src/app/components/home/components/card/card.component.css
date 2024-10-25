@@ -1,0 +1,22 @@
+.card {
+    background-color: var(--background-color-2);
+    color: var(--color-1);
+}
+
+img.icon-1 {
+    width: 5rem;
+    cursor: pointer;
+}
+
+img.icon-1:hover {
+    opacity: .75;
+}
+
+img.icon-2 {
+    width: 4rem;
+    cursor: pointer;
+}
+
+img.icon-2:hover {
+    opacity: .75;
+}

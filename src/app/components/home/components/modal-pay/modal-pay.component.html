@@ -1,0 +1,35 @@
+<div class="modal fade" id="modalPay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalPayLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalPayLabel">Agregar Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="formAdd" (submit)="add()">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="title" class="form-label h5 text-muted">Titulo (Opcional)</label>
+                        <input formControlName="title" type="text" class="form-control text-center" id="title"
+                            aria-describedby="titleHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label h5 text-muted">Monto a agregar</label>
+                        <input formControlName="amount" type="number" class="form-control text-center" id="amount"
+                            aria-describedby="amountHelp" step="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label h5 text-muted">Fecha</label>
+                        <input formControlName="date" type="date" class="form-control text-center" id="date"
+                            aria-describedby="dateHelp">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn">
+                        <img src="assets/accept.svg" type="button" class="accept" data-bs-dismiss="modal" />
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

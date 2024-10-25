@@ -1,0 +1,14 @@
+<div class="row mb-5">
+    <div class="col-12">
+        <img src="assets/add.svg" class="img-fluid add" title="Agregar" data-bs-toggle="modal" data-bs-target="#modalAdd" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let item of items">
+        <app-card [item]="item" />
+    </div>
+</div>
+
+<app-modal-add />
+<app-modal-pay />
+<app-modal-history />

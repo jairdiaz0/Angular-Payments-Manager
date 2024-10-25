@@ -1,0 +1,30 @@
+<div class="modal fade" id="modalAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalAddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalAddLabel">Agregar Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="formAdd" (submit)="add()">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name" class="form-label h5 text-muted">Nombre del Item</label>
+                        <input formControlName="name" type="text" class="form-control text-center" id="name"
+                            aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="total" class="form-label h5 text-muted">Monto total</label>
+                        <input formControlName="total" type="number" class="form-control text-center" id="total"
+                            aria-describedby="totalHelp" step="1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn">
+                        <img src="assets/accept.svg" type="button" class="accept" data-bs-dismiss="modal" />
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
